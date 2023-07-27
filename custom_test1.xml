@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<mavlink>
+
+    <include>common.xml</include>
+    <<version>9</version>
+    <dialect>8</dialect>
+
+    <enums>
+        <enum name="TEST_DATA">
+          <description> Various testing values to see how MAVLink works</description>
+          <entry value="1" name="TEST_DATA_1">
+            <description>testing 1</description>
+          </entry>
+          <entry value="2" name="TEST_DATA_2">
+            <description>tesing 2</description>
+          </entry>
+    </enums>
+
+    <messages>
+        <message id="1" name="TEST_TRANSMISSION">
+          <description>Test whether code is capable of sending and receiving data / messages</description>
+          <field type="uint8_t" name="message_sent_1" enum="TEST_DATA">1st message transmitted</field>
+          <field type="uint8_t" name="message_sent_2" enum="TEST_DATA">2nd message transmitted</field>
+    </messages>
+
+</mavlink>
